@@ -1,6 +1,8 @@
 # 3DLS Project Page
 
-This is the source code for the project page of the paper *"Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels"*, also known as **3DLS**. For the source code of the main work, please refer to [TODO]().
+This is the source code for the project page of the paper  
+*"Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels"*, also known as **3DLS**.  
+For the source code of the main work, please refer to [TODO]().
 
 
 # Acknowledgements
