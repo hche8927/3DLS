@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+            content="Fast and high-fidelity 3D splatting with linear kernels.">
+        <meta name="keywords" content="3DGS, 3DLS, Rendering">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>3DLS</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="static/css/bootstrap-4.4.1.css">
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet">
+
+        <!-- Bulma and Font Awesome -->
+        <link rel="stylesheet" href="static/css/bulma.min.css">
+        <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="static/css/index.css">
+        <link rel="icon" href="static/images/favicon.svg">
+
+        <!-- jQuery and JS -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="static/js/fontawesome.all.min.js"></script>
+        <script src="static/js/bulma-carousel.min.js"></script>
+        <script src="static/js/bulma-slider.min.js"></script>
+        <script src="static/js/index.js"></script>
+        <script src="static/js/video_comparison.js"></script>
+
+        <link rel="stylesheet" href="static/css/dics.original.css">
+        <script src="static/js/event_handler.js"></script>
+        <script src="static/js/dics.original.js"></script>
+
+    </head>
+
+    <body>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title"
+                            style="margin-top: 80px">
+                            Beyond Gaussians: Fast and High-Fidelity 3D
+                            Splatting with Linear Kernels
+                        </h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href>Haodong Chen</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href>Runnan Chen</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href>Qiang Qu</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href>Zhaoqing Wang</a><sup>1</sup>,
+                            </span>
+                            <br>
+                            <span class="author-block">
+                                <a href>Tongliang Liu</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href>Xiaoming Chen</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href>Yuk Ying Chung</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <sup>1</sup>
+                                University of Sydney,
+                            </span>
+                            <span class="author-block">
+                                <sup>2</sup>
+                                Beijing Technology and Business University
+                            </span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a
+                                        href="https://arxiv.org/pdf/2411.12440"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a
+                                        href="https://arxiv.org/abs/2411.12440"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a
+                                        href
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code (Coming Soon)</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a
+                                        href
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="far fa-images"></i>
+                                        </span>
+                                        <span>Results (Coming Soon)</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a
+                                        href
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i
+                                                class="fa fa-gamepad"></i>
+                                        </span>
+                                        <span>Play Now! (Coming Soon)</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3">Motivation</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <img src="./static/images/teaser.png"
+                            class="center" style="margin-top: -70px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <div class="content has-text-justified">
+                            <p style="margin-top: -70px">
+                                Comparison of 3D splatting with Gaussian and
+                                linear kernels. Gaussian
+                                kernel-based splatting results in blurred
+                                effects, floating artifacts,
+                                and over-reconstruction, where small-scale
+                                geometry is represented by
+                                oversized splats, reducing clarity in
+                                high-frequency regions. Panel (a)
+                                shows 3D Gaussian Splatting (3DGS), where soft
+                                ellipsoid boundaries cause interference between
+                                foreground and
+                                background. Panel (b) illustrates how the
+                                unbounded support of Gaussian
+                                kernels hinders separation in 1D distributions.
+                                In contrast, panels (c)
+                                and (d) show our 3D Linear Splatting (3DLS),
+                                where bounded linear
+                                kernels reduce interference and enhance
+                                separation, achieving clearer
+                                and more accurate reconstructions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abstract. -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                Recent advancements in 3D Gaussian Splatting
+                                (3DGS) have substantially improved novel
+                                view synthesis, enabling high-quality
+                                reconstruction and real-time rendering.
+                                However, blurring artifacts, such as
+                                floating primitives and over-reconstruction,
+                                remain challenging. Current methods address
+                                these issues by refining scene structure,
+                                enhancing geometric representations,
+                                addressing blur in training images,
+                                improving rendering consistency, and
+                                optimizing density control, yet the role of
+                                kernel design remains underexplored. We
+                                identify the soft boundaries of Gaussian
+                                ellipsoids as one of the causes of these
+                                artifacts, limiting detail capture in
+                                high-frequency regions. To bridge this gap,
+                                we introduce 3D Linear Splatting (3DLS),
+                                which replaces Gaussian kernels with linear
+                                kernels to achieve sharper and more precise
+                                results, particularly in high-frequency
+                                regions. Through evaluations on three
+                                datasets, 3DLS demonstrates state-of-the-art
+                                fidelity and accuracy, along with a 30% FPS
+                                improvement over baseline 3DGS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ Abstract. -->
+
+        <!-- OVERVIEW -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3">Overview</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <img src="./static/images/flowchart.png"
+                            class="center" style="margin-top: -70px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <div class="content has-text-justified">
+                            <p style="margin-top: -70px">
+                                Overview of our method integrated within the
+                                3DGS framework. The process begins with
+                                replacing Gaussian kernels with linear
+                                kernels to enhance detail capture. Next,
+                                <b>DA</b> ensures
+                                comprehensive splat coverage, optimizing
+                                compatibility with existing frameworks.
+                                Finally, <b>AGS</b>
+                                is applied to support stable training and
+                                improve convergence, resulting in higher
+                                visual fidelity.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- OVERVIEW -->
+
+        <!-- KERNELS -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3">Comparing Kernels</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <img src="./static/images/kernel_patterns.png"
+                            class="center" style="margin-top: -70px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full-width">
+                        <div class="content has-text-justified">
+                            <p style="margin-top: -70px">
+                                Evaluation of different kernels on complex
+                                patterns to simulate challenging cases. Results
+                                indicate that the linear kernel excels
+                                in reconstructing high-frequency regions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- KERNELS -->
+
+        <!-- Results. -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered ">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3 has-text-centered"
+                            style="margin-top: -30px">Results</h2>
+                        <div class="container">
+                            <ul class="nav nav-tabs nav-fill nav-justified"
+                                id="object-scale-recon">
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                        onclick="objectSceneEvent(0,0,'object-scale-recon')">bicycle</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        onclick="objectSceneEvent(1,0,'object-scale-recon')">garden</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        onclick="objectSceneEvent(2,0,'object-scale-recon')">flowers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        onclick="objectSceneEvent(3,0,'object-scale-recon')">bonsai</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active"
+                                        onclick="objectSceneEvent(4,0,'object-scale-recon')">room</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link "
+                                        onclick="objectSceneEvent(5,0,'object-scale-recon')">train</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        onclick="objectSceneEvent(6,0,'object-scale-recon')">truck</a>
+                                </li>
+                            </ul>
+                            <div class="b-dics"
+                                style="width: 1600px; font-weight: 400;">
+                                <img
+                                    src="./static/images/results/room/gs.png"
+                                    alt="3DGS">
+                                <img
+                                    src="./static/images/results/room/ls.png"
+                                    alt="3DLS (Ours)">
+                                <img
+                                    src="./static/images/results/room/gt.png"
+                                    alt="GT">
+                            </div>
+                        </div>
+                        <div class="content has-text-justified">
+                            <p style="margin-top: 30px">
+                                Qualitative results demonstrate that our method
+                                excels in capturing high-frequency details, fine
+                                structures, and sharp transitions,
+                                resulting in higher-fidelity reconstructions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>@misc{chen2024linear,
+<!--                        -->    title={Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels}, 
+<!--                        -->    author={Haodong Chen and Runnan Chen and Qiang Qu and Zhaoqing Wang and Tongliang Liu and Xiaoming Chen and Yuk Ying Chung},
+<!--                        -->    year={2024},
+<!--                        -->    eprint={2411.12440},
+<!--                        -->    archivePrefix={arXiv},
+<!--                        -->    primaryClass={cs.CV},
+<!--                        -->    url={https://arxiv.org/abs/2411.12440}
+<!--                        -->}</code></pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a
+                                    rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                    Commons Attribution-ShareAlike 4.0
+                                    International License</a>.
+                            </p>
+                            <p>
+                                This webpage template is from <a
+                                    href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                                The image comparison with the sliding bar is
+                                from <a
+                                    href="https://research.nvidia.com/labs/dir/neuralangelo/">Neuralangelo</a>.
+                            </p>
+                            <p>
+                                The design of this page is inspired by <a
+                                    href="https://niujinshuchong.github.io/mip-splatting/">Mip-Splatting</a>
+                                and <a
+                                    href="https://ty424.github.io/AbsGS.github.io/">AbsGS</a>.
+                            </p>
+                            <p>
+                                We thank everyone for their awesome works, which
+                                made creating this project page much easier.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
