@@ -1,6 +1,6 @@
 # 3DLS Project Page
 
-url: https://hche8927.github.io/3DLS
+Visit https://hche8927.github.io/3DLS to see the project page.
 
 This is the source code for the project page of the paper  
 *"Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels"*, also known as **3DLS**.  
